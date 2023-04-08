@@ -5,7 +5,7 @@ const deepl = require('deepl-node');
 const { getWordsList } = require('most-common-words-by-language');
 const _ = require('lodash');
 const app = express();
-const port = 8080;
+const port = process.env.PORT || 8080;
 
 const API_KEY = process.env.API_KEY;
 const translator = new deepl.Translator(API_KEY);
